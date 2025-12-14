@@ -6,6 +6,7 @@ import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import Welcome from './components/Welcome';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Navigation />
       <main>
         <Hero />
+        <Welcome/>
         <HowIWorkSection />
         <AboutSection />
         <ServicesSection />
