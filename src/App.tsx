@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
+import { WelcomeSection } from './components/WelcomeSection';
 import { HowIWorkSection } from './components/HowIWorkSection';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-import Welcome from './components/Welcome';
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
       <Navigation />
       <main>
         <Hero />
-        <Welcome/>
+        <WelcomeSection />
         <HowIWorkSection />
         <AboutSection />
         <ServicesSection />

@@ -29,10 +29,11 @@ export function Navigation() {
     }
   };
 
-  const navLinks = [
+  const menuItems = [
     { id: 'home', label: 'Startseite' },
+    { id: 'how-i-work', label: 'Wie ich arbeite' },
     { id: 'about', label: 'Über mich' },
-    { id: 'services', label: 'Leistungen' },
+    { id: 'services', label: 'Kosten' },
     { id: 'contact', label: 'Kontakt' },
   ];
 
@@ -66,7 +67,7 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {menuItems.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
@@ -92,7 +93,7 @@ export function Navigation() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
+            {menuItems.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
