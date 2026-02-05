@@ -5,7 +5,9 @@ export function ImprintPage() {
     <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-[300px]" style={{
       paddingTop: "150px"
     }}>
-      <div className="bg-white/90 shadow-lg rounded-3xl p-8 sm:p-12 border border-white/60">
+      <div className="bg-white/90 shadow-lg rounded-3xl p-8 sm:p-12 border border-white/60" style={{
+        backgroundColor: "#fff"
+      }}>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-10">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-[#FFB800] font-semibold">
