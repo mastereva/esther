@@ -32,9 +32,12 @@ export function Footer() {
               >
                 Impressum
               </a>
-              <button className="text-sm text-gray-400 hover:text-[#FFB800] transition-colors">
+              <a
+                href="#datenschutz"
+                className="text-sm text-gray-400 hover:text-[#FFB800] transition-colors"
+              >
                 Datenschutz
-              </button>
+              </a>
             </div>
           </div>
         </div>

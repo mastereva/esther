@@ -3,10 +3,10 @@ import { Menu, X } from 'lucide-react';
 import logoImage from 'figma:asset/0b0ea5fb05a12e2432ece2ae6720c3c696e228b9.png';
 
 type NavigationProps = {
-  isImprintPage?: boolean;
+  isLegalPage?: boolean;
 };
 
-export function Navigation({ isImprintPage = false }: NavigationProps) {
+export function Navigation({ isLegalPage = false }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -42,7 +42,7 @@ export function Navigation({ isImprintPage = false }: NavigationProps) {
   ];
 
   const handleLogoClick = () => {
-    if (isImprintPage) {
+    if (isLegalPage) {
       window.location.hash = '#home';
       return;
     }
@@ -75,7 +75,7 @@ export function Navigation({ isImprintPage = false }: NavigationProps) {
           </button>
 
           {/* Desktop Navigation */}
-          {!isImprintPage ? (
+          {!isLegalPage ? (
             <div className="hidden md:flex items-center space-x-8">
               {menuItems.map((link) => (
                 <button
@@ -98,7 +98,7 @@ export function Navigation({ isImprintPage = false }: NavigationProps) {
           )}
 
           {/* Mobile Menu Button */}
-          {!isImprintPage && (
+          {!isLegalPage && (
             <button
               className="md:hidden text-gray-700 hover:text-[#FFB800] transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -110,7 +110,7 @@ export function Navigation({ isImprintPage = false }: NavigationProps) {
       </div>
 
       {/* Mobile Menu */}
-      {!isImprintPage && isMobileMenuOpen && (
+      {!isLegalPage && isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-4 space-y-3">
             {menuItems.map((link) => (
