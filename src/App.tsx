@@ -8,32 +8,49 @@ import { ServicesSection } from './components/ServicesSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ImprintPage } from './components/ImprintPage';
+import { DatenschutzPage } from './components/DatenschutzPage';
 
 export default function App() {
-  const [isImprintPage, setIsImprintPage] = useState(
-    () => window.location.hash === '#impressum'
+  const [activePage, setActivePage] = useState<'impressum' | 'datenschutz' | null>(
+    () => {
+      if (window.location.hash === '#impressum') {
+        return 'impressum';
+      }
+      if (window.location.hash === '#datenschutz') {
+        return 'datenschutz';
+      }
+      return null;
+    }
   );
 
   useEffect(() => {
     const handleHashChange = () => {
-      setIsImprintPage(window.location.hash === '#impressum');
+      if (window.location.hash === '#impressum') {
+        setActivePage('impressum');
+        return;
+      }
+      if (window.location.hash === '#datenschutz') {
+        setActivePage('datenschutz');
+        return;
+      }
+      setActivePage(null);
     };
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   useEffect(() => {
-    if (isImprintPage) {
+    if (activePage) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }, [isImprintPage]);
+  }, [activePage]);
 
-  if (isImprintPage) {
+  if (activePage) {
     return (
       <div className="min-h-screen" style={{ backgroundColor: '#D1D9E6' }}>
-        <Navigation isImprintPage />
+        <Navigation isLegalPage />
         <main className="pt-24 pb-16">
-          <ImprintPage />
+          {activePage === 'impressum' ? <ImprintPage /> : <DatenschutzPage />}
         </main>
         <Footer />
       </div>
