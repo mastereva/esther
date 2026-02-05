@@ -2,20 +2,6 @@ import React from 'react';
 import { Compass } from 'lucide-react';
 
 export function Footer() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -40,9 +26,12 @@ export function Footer() {
               © {new Date().getFullYear()} Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center space-x-6">
-              <button className="text-sm text-gray-400 hover:text-[#FFB800] transition-colors">
+              <a
+                href="#impressum"
+                className="text-sm text-gray-400 hover:text-[#FFB800] transition-colors"
+              >
                 Impressum
-              </button>
+              </a>
               <button className="text-sm text-gray-400 hover:text-[#FFB800] transition-colors">
                 Datenschutz
               </button>
