@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logoImage from 'figma:asset/0b0ea5fb05a12e2432ece2ae6720c3c696e228b9.png';
 
-export function Navigation() {
+type NavigationProps = {
+  isImprintPage?: boolean;
+};
+
+export function Navigation({ isImprintPage = false }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -37,6 +41,14 @@ export function Navigation() {
     { id: 'contact', label: 'Kontakt' },
   ];
 
+  const handleLogoClick = () => {
+    if (isImprintPage) {
+      window.location.hash = '#home';
+      return;
+    }
+    scrollToSection('home');
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -47,7 +59,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <button
-            onClick={() => scrollToSection('home')}
+            onClick={handleLogoClick}
             className="flex items-center space-x-3 group"
           >
             <img 
@@ -63,31 +75,42 @@ export function Navigation() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-gray-700 hover:text-[#FFB800] transition-colors relative group"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFB800] group-hover:w-full transition-all duration-300"></span>
-              </button>
-            ))}
-          </div>
+          {!isImprintPage ? (
+            <div className="hidden md:flex items-center space-x-8">
+              {menuItems.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-gray-700 hover:text-[#FFB800] transition-colors relative group"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFB800] group-hover:w-full transition-all duration-300"></span>
+                </button>
+              ))}
+            </div>
+          ) : (
+            <a
+              href="#home"
+              className="hidden md:inline-flex items-center text-gray-700 hover:text-[#FFB800] transition-colors"
+            >
+              Zurück zur Startseite
+            </a>
+          )}
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-700 hover:text-[#FFB800] transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {!isImprintPage && (
+            <button
+              className="md:hidden text-gray-700 hover:text-[#FFB800] transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          )}
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
+      {!isImprintPage && isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-4 space-y-3">
             {menuItems.map((link) => (
