@@ -17,12 +17,7 @@ export function DatenschutzPage() {
               Datenschutzerklärung
             </h1>
           </div>
-          <a
-            href="#home"
-            className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-[#FFB800] text-gray-900 font-semibold hover:bg-[#f0ab00] transition-colors shadow-md"
-          >
-            Zurück zur Startseite
-          </a>
+          
         </div>
 
         <div className="privacy-content text-gray-700 leading-relaxed">
@@ -98,6 +93,15 @@ export function DatenschutzPage() {
           <p>Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.</p>
           <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
         </div>
+        <a
+            href="#home"
+            className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-[#FFB800] text-gray-900 font-semibold hover:bg-[#f0ab00] transition-colors shadow-md"
+            style={{
+              width: "100%"
+            }}
+          >
+            Zurück zur Startseite
+          </a>
       </div>
     </section>
   );
