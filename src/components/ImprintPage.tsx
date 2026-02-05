@@ -2,7 +2,9 @@ import React from 'react';
 
 export function ImprintPage() {
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-[300px]" style={{
+      paddingTop: "150px"
+    }}>
       <div className="bg-white/90 shadow-lg rounded-3xl p-8 sm:p-12 border border-white/60">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-10">
           <div>
@@ -16,12 +18,6 @@ export function ImprintPage() {
               Bitte ersetze die Platzhalter mit deinen persönlichen Angaben.
             </p>
           </div>
-          <a
-            href="#home"
-            className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-[#FFB800] text-gray-900 font-semibold hover:bg-[#f0ab00] transition-colors shadow-md"
-          >
-            Zurück zur Startseite
-          </a>
         </div>
 
         <div className="space-y-8 text-gray-700 leading-relaxed">
@@ -77,6 +73,17 @@ export function ImprintPage() {
               Abschnitt nach Bedarf an.
             </p>
           </div>
+        <a
+            href="#home"
+            className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-[#FFB800] text-gray-900 font-semibold hover:bg-[#f0ab00] transition-colors shadow-md"
+            style={
+              {
+                width: "100%"
+              }
+            }
+          >
+            Zurück zur Startseite
+          </a>
         </div>
       </div>
     </section>
