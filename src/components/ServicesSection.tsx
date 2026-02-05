@@ -1,10 +1,10 @@
 import React from 'react';
-import { User, Users, Presentation, MapPin, Check, Euro } from 'lucide-react';
+import { User, Users, Presentation, MapPin, Check } from 'lucide-react';
 import costsImage from 'figma:asset/f765f9cab17850519f34ae2306a5a7f6c02d8dfc.png';
 
 export function ServicesSection() {
   return (
-    <section id="services" className="bg-white">
+    <section id="services" style={{ backgroundColor: '#D1D9E6' }}>
       {/* Hero Banner with Quote */}
       <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
         <div className="absolute inset-0">
@@ -13,27 +13,24 @@ export function ServicesSection() {
             alt="Wertschätzung"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-900/60 to-gray-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-gray-900/30 to-gray-900/40"></div>
         </div>
 
-        {/* Quote Overlay */}
-        <div className="relative z-10 h-full flex items-center justify-center px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* Quote Overlay - Bottom Left Position */}
+        <div className="relative z-10 h-full flex items-end justify-start px-4 pb-24">
+          <div className="max-w-3xl text-left" style={{ marginLeft: '5cm' }}>
             <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 md:p-10 border border-white/20">
-              <div className="mb-4">
-                <Euro className="text-[#FFB800] mx-auto" size={40} />
-              </div>
-              <p className="text-xl md:text-2xl lg:text-3xl text-white italic leading-relaxed mb-4">
+              <p className="text-lg md:text-xl lg:text-2xl text-white italic leading-relaxed mb-4">
                 "Ein freundliches Wort ist mehr wert als es kostet"
               </p>
-              <p className="text-[#FFB800] text-lg md:text-xl">— Ernst Ferstl</p>
+              <p className="text-[#FFB800] text-base md:text-lg">— Ernst Ferstl</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-24 bg-white">
+      <div className="py-24" style={{ backgroundColor: '#D1D9E6' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -64,7 +61,7 @@ export function ServicesSection() {
                   <span className="text-5xl font-bold">80</span>
                   <span className="text-3xl ml-2">€</span>
                 </div>
-                <p className="text-white/80 mt-2">pro Sitzung</p>
+                <p className="text-white/80 mt-2">pro Stunde</p>
               </div>
               <div className="p-8 bg-gray-50">
                 <ul className="space-y-4">
@@ -85,11 +82,8 @@ export function ServicesSection() {
             </div>
 
             {/* Team-Supervision */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-4 border-[#FFB800]">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
               <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-10 text-white relative">
-                <div className="absolute top-4 right-4 bg-[#FFB800] text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
-                  Beliebt
-                </div>
                 <div className="w-20 h-20 bg-[#FFB800]/20 rounded-xl flex items-center justify-center mb-6">
                   <Users size={40} className="text-[#FFB800]" />
                 </div>
@@ -106,7 +100,7 @@ export function ServicesSection() {
                   <span className="text-5xl font-bold">120</span>
                   <span className="text-3xl ml-2">€</span>
                 </div>
-                <p className="text-white/80 mt-2">pro Sitzung</p>
+                <p className="text-white/80 mt-2">pro Stunde</p>
               </div>
               <div className="p-8 bg-gray-50">
                 <ul className="space-y-4">
@@ -186,43 +180,6 @@ export function ServicesSection() {
                 <div className="flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md">
                   <div className="w-2 h-2 bg-[#FFB800] rounded-full"></div>
                   <span className="text-gray-700">Hamburg & Umgebung</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Schwerpunkte */}
-          <div className="bg-white rounded-2xl shadow-xl p-10 md:p-12 border-t-4 border-[#FFB800]">
-            <h3 className="text-4xl text-center text-gray-900 mb-12">
-              Meine Schwerpunkte
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="flex items-start space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-md">
-                <div className="w-3 h-3 bg-[#FFB800] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-xl text-gray-900 mb-2 font-semibold">SPFH</h4>
-                  <p className="text-gray-600 leading-relaxed">Sozialpädagogische Familienhilfe mit langjähriger Praxiserfahrung</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-md">
-                <div className="w-3 h-3 bg-[#FFB800] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-xl text-gray-900 mb-2 font-semibold">Diversion</h4>
-                  <p className="text-gray-600 leading-relaxed">(Feministische) Diversionsarbeit und Ausgleich mit Geschädigten</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-md">
-                <div className="w-3 h-3 bg-[#FFB800] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-xl text-gray-900 mb-2 font-semibold">Konstruktivismus</h4>
-                  <p className="text-gray-600 leading-relaxed">Besonderes Interesse an konstruktivistischen Ansätzen</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-md">
-                <div className="w-3 h-3 bg-[#FFB800] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-xl text-gray-900 mb-2 font-semibold">Kommunikation</h4>
-                  <p className="text-gray-600 leading-relaxed">Fokus auf Kommunikationsstrukturen und -prozesse</p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { GraduationCap, BookOpen, Briefcase, Heart, Sparkles } from 'lucide-react';
-import aboutImage from 'figma:asset/e5d9a5c1c34b6484880f5778195026e8e0e5d7d2.png';
+import { GraduationCap, BookOpen } from 'lucide-react';
+import aboutImage from 'figma:asset/c83c3615130ad3e7c2b7802b57daaa70264bb945.png';
 
 export function AboutSection() {
   const qualifications = [
@@ -37,7 +37,7 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="bg-white">
+    <section id="about" style={{ backgroundColor: '#D1D9E6' }}>
       {/* Hero Banner with Quote */}
       <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
         <div className="absolute inset-0">
@@ -46,28 +46,25 @@ export function AboutSection() {
             alt="Neue Perspektiven und Freiheit"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-900/60 to-gray-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-gray-900/30 to-gray-900/40"></div>
         </div>
 
-        {/* Quote Overlay */}
-        <div className="relative z-10 h-full flex items-center justify-center px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 md:p-10 border border-white/20">
-              <div className="mb-4">
-                <Sparkles className="text-[#FFB800] mx-auto" size={40} />
-              </div>
-              <p className="text-xl md:text-2xl lg:text-3xl text-white italic leading-relaxed mb-4">
-                "Aber glaubst du nicht, …, daß man Seeräuber und eine wirklich feine 
+        {/* Quote Overlay - Far Top Right Corner */}
+        <div className="relative z-10 h-full flex items-start justify-end pr-4 pt-8">
+          <div className="max-w-2xl">
+            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20">
+              <p className="text-lg md:text-xl lg:text-2xl text-white italic leading-relaxed mb-4">
+                "Aber glaubst du nicht, …, dass man Seeräuber und eine wirklich feine 
                 Dame gleichzeitig werden kann?"
               </p>
-              <p className="text-[#FFB800] text-lg md:text-xl">— Pippi Langstrumpf</p>
+              <p className="text-[#FFB800] text-base md:text-lg">— Pippi Langstrumpf</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-24 bg-white">
+      <div className="py-24" style={{ backgroundColor: '#D1D9E6' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -85,21 +82,15 @@ export function AboutSection() {
             {/* Introduction Cards */}
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               <div className="bg-gradient-to-br from-[#FFB800]/10 to-white rounded-2xl p-8 shadow-lg border-l-4 border-[#FFB800]">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Heart className="text-[#FFB800]" size={32} />
-                  <h3 className="text-2xl text-gray-900">Mein Weg</h3>
-                </div>
+                <h3 className="text-2xl text-gray-900 mb-4">Mein Weg</h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Ich, Jahrgang '68, habe mit fast 40 mein Diplom an der Fachhochschule 
-                  Hamburg erhalten. Und davor? Lebenserfahrungen gesammelt :)
+                  Hamburg erhalten. Und davor? Lebenserfahrung in anderen Bereichen gesammelt.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg border-l-4 border-gray-900">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Sparkles className="text-gray-900" size={32} />
-                  <h3 className="text-2xl text-gray-900">Meine Passion</h3>
-                </div>
+                <h3 className="text-2xl text-gray-900 mb-4">Meine Passion</h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Ich habe zwar spät studiert, dann aber mit Leidenschaft. Mein größtes 
                   Interesse gilt bis heute dem Konstruktivismus und der Kommunikation.
@@ -109,10 +100,7 @@ export function AboutSection() {
 
             {/* Professional Journey */}
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-t-4 border-[#FFB800] mb-12">
-              <div className="flex items-center space-x-3 mb-8">
-                <Briefcase className="text-[#FFB800]" size={36} />
-                <h3 className="text-3xl text-gray-900">Beruflicher Werdegang</h3>
-              </div>
+              <h3 className="text-3xl text-gray-900 mb-8">Beruflicher Werdegang</h3>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -130,7 +118,7 @@ export function AboutSection() {
                     Nunmehr bin ich seit 20 Jahren beim gleichen Träger beschäftigt. Mein 
                     Arbeitsfeld hat sich im Laufe der Jahre verschoben. Begonnen habe ich 
                     im Schwerpunkt mit (feministischer) Diversionsarbeit, anschließend habe 
-                    ich viele Jahre lang als Sozialpädagogische Familienhilfe und 
+                    ich viele Jahre als Sozialpädagogische Familienhilfe und 
                     Erziehungsbeistandschaft gearbeitet.
                   </p>
                 </div>

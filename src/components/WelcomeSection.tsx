@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function WelcomeSection() {
   const scrollToContact = () => {
@@ -13,17 +13,14 @@ export function WelcomeSection() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20" style={{ backgroundColor: '#D1D9E6' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Welcome Header */}
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <Compass className="text-[#FFB800]" size={40} />
-            </div>
             <h1 className="text-4xl md:text-5xl text-gray-900 mb-6">
-              Willkommen auf meiner Homepage,<br />
-              schön dass Sie da sind
+              Willkommen auf meiner Homepage.<br />
+              Schön, dass Sie da sind.
             </h1>
           </div>
 

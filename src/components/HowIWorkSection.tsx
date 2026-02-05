@@ -1,10 +1,11 @@
 import React from 'react';
 import { Compass, Heart, Lightbulb, Users } from 'lucide-react';
-import howIWorkImage from 'figma:asset/750ee1fe07cf1018949f9464cb6687e88811406a.png';
+import howIWorkImage from 'figma:asset/6f48320161697ac4faff29bef5c8c2ebe2c1a788.png';
+import dgsfLogo from 'figma:asset/99990b588519009cc34d05adda8f2ffbaf84ddf4.png';
 
 export function HowIWorkSection() {
   return (
-    <section id="how-i-work" className="bg-white">
+    <section id="how-i-work" style={{ backgroundColor: '#D1D9E6' }}>
       {/* Hero Banner with Quote */}
       <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
         <div className="absolute inset-0">
@@ -13,28 +14,25 @@ export function HowIWorkSection() {
             alt="Die Reise"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-900/60 to-gray-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-gray-900/30 to-gray-900/40"></div>
         </div>
 
-        {/* Quote Overlay */}
-        <div className="relative z-10 h-full flex items-center justify-center px-4">
+        {/* Quote Overlay - Center Top */}
+        <div className="relative z-10 h-full flex items-start justify-center px-4 pt-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 md:p-10 border border-white/20">
-              <div className="mb-4">
-                <Compass className="text-[#FFB800] mx-auto" size={40} />
-              </div>
-              <p className="text-xl md:text-2xl lg:text-3xl text-white italic leading-relaxed mb-4">
+              <p className="text-lg md:text-xl lg:text-2xl text-white italic leading-relaxed mb-4">
                 "… die Geisteshaltung des Reisenden, der nicht das Bekannte sucht, 
-                sondern dem gegenüber offen ist, was auf der Reise Geschieht."
+                sondern dem gegenüber offen ist, was auf der Reise geschieht."
               </p>
-              <p className="text-[#FFB800] text-lg md:text-xl">— Gloria Steinem</p>
+              <p className="text-[#FFB800] text-base md:text-lg">— Gloria Steinem</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-24 bg-white">
+      <div className="py-24" style={{ backgroundColor: '#D1D9E6' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -50,12 +48,12 @@ export function HowIWorkSection() {
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
                 Ausgerüstet mit meinem systemischen Methodenkoffer begebe ich mich gerne 
                 mit Ihnen auf die Reise. Ich lade Sie ein, Entwicklungsräume zu öffnen 
-                und zu gestalten – Ihre Bedarfe geben die Richtung vor für den Weg, auf 
+                und zu gestalten – Ihre Bedürfnisse geben die Richtung vor für den Weg, auf 
                 dem ich Sie gerne begleite.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
-                Meine wertschätzende, empathische und neugierige Haltung individueller 
-                Lebensgestaltungen hilft Ihnen dabei, eigene Erkenntnisse Ihres Potenzials 
+                Meine wertschätzende, empathische und neugierige Haltung gegenüber individueller 
+                Lebensgestaltungen hilft Ihnen, eigene Erkenntnisse Ihres Potenzials 
                 für Lösungen zu entdecken und zu fördern.
               </p>
             </div>
@@ -72,7 +70,7 @@ export function HowIWorkSection() {
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Meine Begleitung gibt Ihnen Orientierungssicherheit durch Zugewandtheit 
-                und echtes Interesse an Ihrer individuellen Situation
+                und Interesse an Ihrer individuellen Situation
               </p>
             </div>
 
@@ -96,10 +94,14 @@ export function HowIWorkSection() {
               <h3 className="text-2xl text-gray-900 mb-4">
                 DGSF-Standards
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Zusammenarbeit unter fachlichen und ethischen Standards gemäß der DGSF 
                 im Rahmen von Beratung, Coaching oder Supervision
               </p>
+              {/* DGSF Certificate */}
+              <div className="mt-6 flex justify-center">
+                <img src={dgsfLogo} alt="DGSF Zertifikat" className="w-32 h-32 object-contain" />
+              </div>
             </div>
           </div>
 

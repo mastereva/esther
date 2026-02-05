@@ -56,10 +56,7 @@ export function Navigation() {
               className="w-14 h-14 transform group-hover:scale-110 transition-transform"
             />
             <div className="flex flex-col items-start">
-              <span className="text-2xl text-gray-800 leading-tight">
-                Systemisches Coaching
-              </span>
-              <span className="text-xs text-gray-600 tracking-wide">
+              <span className="text-base md:text-lg text-gray-700 tracking-wide font-medium">
                 Beratung, Coaching, Supervision
               </span>
             </div>
