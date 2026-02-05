@@ -429,6 +429,58 @@
   }
 }
 
+@layer components {
+  .privacy-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .privacy-content h2 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(31 41 55);
+  }
+
+  .privacy-content h3 {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: rgb(31 41 55);
+  }
+
+  .privacy-content h4 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(55 65 81);
+  }
+
+  .privacy-content p {
+    color: rgb(55 65 81);
+  }
+
+  .privacy-content ul {
+    margin-left: 1.5rem;
+    display: grid;
+    gap: 0.5rem;
+    list-style: disc;
+  }
+
+  .privacy-content a {
+    color: rgb(234 179 8);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .privacy-content h2:first-child {
+    margin-top: 0;
+  }
+}
+
 @layer utilities {
   .absolute {
     position: absolute;
