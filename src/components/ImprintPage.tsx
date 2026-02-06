@@ -16,9 +16,6 @@ export function ImprintPage() {
             <h1 className="text-3xl sm:text-4xl font-semibold text-gray-800 mt-3">
               Impressum
             </h1>
-            <p className="text-gray-600 mt-3">
-              Bitte ersetze die Platzhalter mit deinen persönlichen Angaben.
-            </p>
           </div>
         </div>
 
@@ -28,18 +25,10 @@ export function ImprintPage() {
               Angaben gemäß § 5 TMG
             </h2>
             <p>
-              Max Mustermann<br />
-              Musterstraße 1<br />
-              12345 Musterstadt<br />
+              Esther Kohrs<br />
+              Altenhagener Weg 10a<br />
+              22147 Hamburg<br />
               Deutschland
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">Kontakt</h2>
-            <p>
-              Telefon: +49 123 456789<br />
-              E-Mail: max.mustermann@example.com
             </p>
           </div>
 
@@ -48,19 +37,7 @@ export function ImprintPage() {
               Umsatzsteuer-ID
             </h2>
             <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
-              DE123456789
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              Verantwortlich für den Inhalt
-            </h2>
-            <p>
-              Max Mustermann<br />
-              Musterstraße 1<br />
-              12345 Musterstadt
+              Kleinunternehmer gemäß § 19 UStG
             </p>
           </div>
 

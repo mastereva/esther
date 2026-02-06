@@ -50,11 +50,10 @@ export function DatenschutzPage() {
           <p>Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
           <h3>Hinweis zur verantwortlichen Stelle</h3>
           <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p>
-          <p>Beispielfirma<br />
-            Musterweg 10<br />
-            90210 Musterstadt</p>
-          <p>Telefon: +49 (0) 123 44 55 66<br />
-            E-Mail: info@beispielfirma.de</p>
+          <p>Esther Kohrs<br />
+            Altenhagener Weg 10a<br />
+            22147 Hamburg
+            E-Mail: e.kohrs-suvi@gmx.de</p>
           <p>Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.</p>
 
           <h3>Speicherdauer</h3>
